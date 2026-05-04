@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnologia no Campo 2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="top-bar">
+        <button onclick="alterarZoom(1.1)" class="btn-topo">A+</button>
+        <button onclick="alterarZoom(0.9)" class="btn-topo">A-</button>
+        <button id="btn-theme" class="btn-topo">Tema</button>
+        <button id="btn-reset" class="btn-topo" onclick="location.reload()">Reiniciar</button>
+    </div>
+
+    <header class="hero-banner">
+        <h2>TECNOLOGIA NO CAMPO</h2>
+        <p>Inovação e Equilíbrio para o Futuro</p>
+    </header>
+
+    <main>
+        <section class="card-container">
+            <h3>Galeria de Inovações</h3>
+            <p style="font-size: 0.9rem; color: #666; margin-bottom: 15px;">Clique na imagem para ler mais:</p>
+            
+            <div class="galeria-grid">
+                <div class="item-galeria" onclick="exibirInfo('drone')">
+                    <div class="moldura">
+                        <img src="https://images.pexels.com/photos/1087118/pexels-photo-1087118.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Drone">
+                        <span class="tag-ia">Gerado por IA</span>
+                    </div>
+                    <h4>Monitoramento Aéreo</h4>
+                </div>
+
+                <div class="item-galeria" onclick="exibirInfo('hidro')">
+                    <div class="moldura">
+                        <img src="https://images.pexels.com/photos/5529504/pexels-photo-5529504.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Hidroponia">
+                        <span class="tag-ia">Gerado por IA</span>
+                    </div>
+                    <h4>Hidroponia Avançada</h4>
+                </div>
+
+                <div class="item-galeria" onclick="exibirInfo('solar')">
+                    <div class="moldura">
+                        <img src="https://images.pexels.com/photos/356036/pexels-photo-356036.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Placas Solares">
+                        <span class="tag-ia">Gerado por IA</span>
+                    </div>
+                    <h4>Energia Limpa</h4>
+                </div>
+            </div>
+
+            <div id="info-detalhada" class="info-box" style="display:none;">
+                <h4 id="info-titulo"></h4>
+                <p id="info-texto"></p>
+                <button onclick="document.getElementById('info-detalhada').style.display='none'" class="btn-fechar">Fechar</button>
+            </div>
+        </section>
+
+        <section class="card-container">
+            <h3>Soluções Inteligentes</h3>
+            <div id="lista-problemas" class="botoes-flex"></div>
+            <div class="feedback-box">
+                <p id="texto-resposta">Selecione um tópico para começar.</p>
+            </div>
+        </section>
+
+        <section class="card-container">
+            <h3>Desafio Tecnológico</h3>
+            <p>O uso de drones ajuda a reduzir o uso de agrotóxicos?</p>
+            <div class="quiz-botoes">
+                <button onclick="verificarQuiz(true)">Sim, com certeza</button>
+                <button onclick="verificarQuiz(false)">Não ajuda</button>
+            </div>
+            <p id="quiz-resultado"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>2026 - Tecnologia e Sustentabilidade no Campo</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
