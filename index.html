@@ -7,9 +7,6 @@
   <title>Agro Forte - Futuro Sustentável</title>
 
   <link rel="stylesheet" href="style.css">
-
-  <!-- Fonte bonita -->
-
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -27,7 +24,7 @@
   <a href="#contato">Contato</a>
 </nav>
 
-<!-- HERO COM OVERLAY -->
+<!-- HERO -->
 
 <section class="hero fade">
   <div class="overlay"></div>
@@ -38,22 +35,34 @@
   </div>
 </section>
 
+<!-- SOBRE -->
+
 <section class="container fade" id="sobre">
   <h2>🌾 Sobre</h2>
-  <p>O agro moderno utiliza tecnologia de ponta para produzir mais com menos impacto ambiental.</p>
+  <p>O agro moderno utiliza tecnologia para produzir mais com menos impacto ambiental.</p>
 </section>
 
-<!-- GALERIA COM PARALLAX -->
+<!-- GALERIA -->
 
 <section class="container fade" id="galeria">
   <h2>📸 Galeria Tecnológica</h2>
+
   <div class="galeria">
-    <img src="img1.jpg" onclick="zoomImg(this)">
-    <img src="img2.jpg" onclick="zoomImg(this)">
-    <img src="img3.jpg" onclick="zoomImg(this)">
-    <img src="img4.jpg" onclick="zoomImg(this)">
+
+```
+<img src="https://images.unsplash.com/photo-1598514982841-4f9c3a2b1c73?q=80&w=1600&auto=format" onclick="zoomImg(this)">
+
+<img src="https://cdn.pixabay.com/photo/2016/11/29/03/53/drone-1866742_1280.jpg" onclick="zoomImg(this)">
+
+<img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?q=80&w=1200&auto=format" onclick="zoomImg(this)">
+
+<img src="https://images.unsplash.com/photo-1560493676-04071c5f467b?q=80&w=1200&auto=format" onclick="zoomImg(this)">
+```
+
   </div>
 </section>
+
+<!-- ZOOM -->
 
 <div id="modal" class="modal" onclick="fecharZoom()">
   <img id="imgZoom">
@@ -69,6 +78,8 @@
     <div><h3 id="num3">0</h3><p>Energia Limpa</p></div>
   </div>
 </section>
+
+<!-- CONTATO -->
 
 <section class="container fade" id="contato">
   <h2>📩 Contato</h2>
