@@ -1,16 +1,16 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Agro Forte - Futuro Sustentável</title>
-
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <h1>Agro Forte</h1>
+<header class="fade">
+  <h1>🌱 Agro Forte</h1>
   <p>Futuro Sustentável: Equilíbrio entre Produção e Meio Ambiente</p>
 </header>
 
@@ -18,55 +18,45 @@
   <a href="#">Início</a>
   <a href="#sobre">Sobre</a>
   <a href="#galeria">Galeria</a>
-  <a href="#tecnologia">Tecnologia</a>
+  <a href="#dados">Dados</a>
   <a href="#contato">Contato</a>
 </nav>
 
-<section class="hero">
-  <h1>Produzir mais respeitando o planeta 🌱</h1>
+<section class="hero fade">
+  <h1>Produzir mais respeitando o planeta 🌎</h1>
+  <button onclick="alert('O futuro do agro começa agora!')">Saiba Mais</button>
 </section>
 
-<section class="container" id="sobre">
-  <h2>Sobre o Agro Sustentável</h2>
-  <p>O agro moderno combina tecnologia, produtividade e respeito ao meio ambiente.</p>
+<section class="container fade" id="sobre">
+  <h2>🌾 Sobre</h2>
+  <p>O agro moderno une tecnologia, produtividade e sustentabilidade.</p>
 </section>
 
-<!-- GALERIA COM ZOOM -->
-<section class="container" id="galeria">
-  <h2>Galeria Tecnológica</h2>
+<section class="container fade" id="galeria">
+  <h2>📸 Galeria</h2>
   <div class="galeria">
     <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef" onclick="zoomImg(this)">
-    <img src="https://images.unsplash.com/photo-1598514982841-4f9c3a2b1c73" onclick="zoomImg(this)">
     <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231" onclick="zoomImg(this)">
+    <img src="https://images.unsplash.com/photo-1598514982841-4f9c3a2b1c73" onclick="zoomImg(this)">
     <img src="https://images.unsplash.com/photo-1581091215367-59ab6b5c7c1c" onclick="zoomImg(this)">
   </div>
 </section>
 
-<!-- MODAL ZOOM -->
 <div id="modal" class="modal" onclick="fecharZoom()">
   <img id="imgZoom">
 </div>
 
-<section class="container" id="tecnologia">
-  <h2>Tecnologias no Campo</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>Monitoramento Aéreo</h3>
-      <p>Drones ajudam a analisar plantações.</p>
-    </div>
-    <div class="card">
-      <h3>Energia Limpa</h3>
-      <p>Uso de energia solar e renovável.</p>
-    </div>
-    <div class="card">
-      <h3>Agricultura de Precisão</h3>
-      <p>Uso de dados para eficiência.</p>
-    </div>
+<section class="container fade" id="dados">
+  <h2>📊 Impacto do Agro</h2>
+  <div class="stats">
+    <div><h3 id="num1">0</h3><p>Produção</p></div>
+    <div><h3 id="num2">0</h3><p>Sustentabilidade</p></div>
+    <div><h3 id="num3">0</h3><p>Energia Limpa</p></div>
   </div>
 </section>
 
-<section class="container" id="contato">
-  <h2>Contato</h2>
+<section class="container fade" id="contato">
+  <h2>📩 Contato</h2>
   <p>Email: contato@agrofuturo.com</p>
 </section>
 
@@ -78,69 +68,3 @@
 
 </body>
 </html>
-
-
-/* ================= CSS ================= */
-body { margin:0; font-family: Arial, sans-serif; background:#f4f7f5; }
-header { background:linear-gradient(90deg,#1b5e20,#4caf50); color:white; padding:20px; text-align:center; }
-nav { display:flex; justify-content:center; gap:20px; background:#2e7d32; padding:10px; position:sticky; top:0; }
-nav a { color:white; text-decoration:none; font-weight:bold; }
-.hero { background:url('https://images.unsplash.com/photo-1500382017468-9049fed747ef') center/cover; height:80vh; display:flex; align-items:center; justify-content:center; color:white; text-align:center; }
-.hero h1 { font-size:3em; background:rgba(0,0,0,0.5); padding:20px; border-radius:10px; }
-.container { padding:40px; max-width:1100px; margin:auto; }
-.cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
-.card { background:white; padding:20px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1); transition:0.3s; }
-.card:hover { transform:scale(1.05); }
-
-/* GALERIA */
-.galeria { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:15px; }
-.galeria img { width:100%; border-radius:10px; cursor:pointer; transition:0.3s; }
-.galeria img:hover { transform:scale(1.05); }
-
-/* MODAL ZOOM */
-.modal {
-  display:none;
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,0.9);
-  justify-content:center;
-  align-items:center;
-}
-.modal img { max-width:90%; max-height:90%; border-radius:10px; }
-
-footer { background:#1b5e20; color:white; text-align:center; padding:20px; margin-top:40px; }
-
-
-/* ================= JS ================= */
-window.addEventListener("scroll", function() {
-  const nav = document.getElementById("navbar");
-  if (window.scrollY > 50) {
-    nav.style.background = "#1b5e20";
-  } else {
-    nav.style.background = "#2e7d32";
-  }
-});
-
-function zoomImg(img) {
-  const modal = document.getElementById("modal");
-  const imgZoom = document.getElementById("imgZoom");
-  modal.style.display = "flex";
-  imgZoom.src = img.src;
-}
-
-function fecharZoom() {
-  document.getElementById("modal").style.display = "none";
-}
-
-// scroll suave
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
-  });
-});
