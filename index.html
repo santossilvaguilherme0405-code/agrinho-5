@@ -1,86 +1,100 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tecnologia no Campo 2026</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agro Forte - Futuro Sustentável</title>
+
+  <!-- CSS EXTERNO -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div id="top-bar">
-        <button onclick="alterarZoom(1.1)" class="btn-topo">A+</button>
-        <button onclick="alterarZoom(0.9)" class="btn-topo">A-</button>
-        <button id="btn-theme" class="btn-topo">Tema</button>
-        <button id="btn-reset" class="btn-topo" onclick="location.reload()">Reiniciar</button>
+<header>
+  <h1>Agro Forte</h1>
+  <p>Futuro Sustentável: Equilíbrio entre Produção e Meio Ambiente</p>
+</header>
+
+<nav id="navbar">
+  <a href="#">Início</a>
+  <a href="#sobre">Sobre</a>
+  <a href="#tecnologia">Tecnologia</a>
+  <a href="#contato">Contato</a>
+</nav>
+
+<section class="hero">
+  <h1>Produzir mais respeitando o planeta 🌱</h1>
+</section>
+
+<section class="container" id="sobre">
+  <h2>Sobre o Agro Sustentável</h2>
+  <p>O agro moderno combina tecnologia, produtividade e respeito ao meio ambiente.</p>
+</section>
+
+<section class="container" id="tecnologia">
+  <h2>Tecnologias no Campo</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Monitoramento Aéreo</h3>
+      <p>Drones ajudam a analisar plantações.</p>
     </div>
+    <div class="card">
+      <h3>Energia Limpa</h3>
+      <p>Uso de energia solar e renovável.</p>
+    </div>
+    <div class="card">
+      <h3>Agricultura de Precisão</h3>
+      <p>Uso de dados para eficiência.</p>
+    </div>
+  </div>
+</section>
 
-    <header class="hero-banner">
-        <h2>TECNOLOGIA NO CAMPO</h2>
-        <p>Inovação e Equilíbrio para o Futuro</p>
-    </header>
+<section class="container" id="contato">
+  <h2>Contato</h2>
+  <p>Email: contato@agrofuturo.com</p>
+</section>
 
-    <main>
-        <section class="card-container">
-            <h3>Galeria de Inovações</h3>
-            <p style="font-size: 0.9rem; color: #666; margin-bottom: 15px;">Clique na imagem para ler mais:</p>
-            
-            <div class="galeria-grid">
-                <div class="item-galeria" onclick="exibirInfo('drone')">
-                    <div class="moldura">
-                        <img src="https://images.pexels.com/photos/1087118/pexels-photo-1087118.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Drone">
-                        <span class="tag-ia">Gerado por IA</span>
-                    </div>
-                    <h4>Monitoramento Aéreo</h4>
-                </div>
+<footer>
+  <p>© 2026 Agro Forte</p>
+</footer>
 
-                <div class="item-galeria" onclick="exibirInfo('hidro')">
-                    <div class="moldura">
-                        <img src="https://images.pexels.com/photos/1087118/pexels-photo-1087118.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Hidroponia">
-                        <span class="tag-ia">Gerado por IA</span>
-                    </div>
-                    <h4>Hidroponia Avançada</h4>
-                </div>
+<!-- JS EXTERNO -->
+<script src="script.js"></script>
 
-                <div class="item-galeria" onclick="exibirInfo('solar')">
-                    <div class="moldura">
-                        <img src="https://images.pexels.com/photos/356036/pexels-photo-356036.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Placas Solares">
-                        <span class="tag-ia">Gerado por IA</span>
-                    </div>
-                    <h4>Energia Limpa</h4>
-                </div>
-            </div>
-
-            <div id="info-detalhada" class="info-box" style="display:none;">
-                <h4 id="info-titulo"></h4>
-                <p id="info-texto"></p>
-                <button onclick="document.getElementById('info-detalhada').style.display='none'" class="btn-fechar">Fechar</button>
-            </div>
-        </section>
-
-        <section class="card-container">
-            <h3>Soluções Inteligentes</h3>
-            <div id="lista-problemas" class="botoes-flex"></div>
-            <div class="feedback-box">
-                <p id="texto-resposta">Selecione um tópico para começar.</p>
-            </div>
-        </section>
-
-        <section class="card-container">
-            <h3>Desafio Tecnológico</h3>
-            <p>O uso de drones ajuda a reduzir o uso de agrotóxicos?</p>
-            <div class="quiz-botoes">
-                <button onclick="verificarQuiz(true)">Sim, com certeza</button>
-                <button onclick="verificarQuiz(false)">Não ajuda</button>
-            </div>
-            <p id="quiz-resultado"></p>
-        </section>
-    </main>
-
-    <footer>
-        <p>2026 - Tecnologia e Sustentabilidade no Campo</p>
-    </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
+
+
+/* ================= CSS (style.css) ================= */
+body { margin:0; font-family: Arial, sans-serif; background:#f4f7f5; }
+header { background:linear-gradient(90deg,#1b5e20,#4caf50); color:white; padding:20px; text-align:center; }
+nav { display:flex; justify-content:center; gap:20px; background:#2e7d32; padding:10px; position:sticky; top:0; }
+nav a { color:white; text-decoration:none; font-weight:bold; }
+.hero { background:url('https://images.unsplash.com/photo-1500382017468-9049fed747ef') center/cover; height:80vh; display:flex; align-items:center; justify-content:center; color:white; text-align:center; }
+.hero h1 { font-size:3em; background:rgba(0,0,0,0.5); padding:20px; border-radius:10px; }
+.container { padding:40px; max-width:1100px; margin:auto; }
+.cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
+.card { background:white; padding:20px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1); transition:0.3s; }
+.card:hover { transform:scale(1.05); }
+footer { background:#1b5e20; color:white; text-align:center; padding:20px; margin-top:40px; }
+
+
+/* ================= JS (script.js) ================= */
+window.addEventListener("scroll", function() {
+  const nav = document.getElementById("navbar");
+  if (window.scrollY > 50) {
+    nav.style.background = "#1b5e20";
+  } else {
+    nav.style.background = "#2e7d32";
+  }
+});
+
+// Scroll suave
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
