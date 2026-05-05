@@ -6,14 +6,12 @@ el.classList.add('show');
 });
 });
 
-/* SCROLL BOTÃO */
 function scrollToSection(id) {
 document.getElementById(id).scrollIntoView({
 behavior: "smooth"
 });
 }
 
-/* ZOOM */
 function zoomImg(img) {
 document.getElementById("modal").style.display = "flex";
 document.getElementById("imgZoom").src = img.src;
@@ -23,7 +21,6 @@ function fecharZoom() {
 document.getElementById("modal").style.display = "none";
 }
 
-/* CONTADOR */
 function animateValue(id, end) {
 let start = 0;
 let interval = setInterval(() => {
