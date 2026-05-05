@@ -6,6 +6,14 @@ el.classList.add('show');
 });
 });
 
+/* SCROLL BOTÃO */
+function scrollToSection(id) {
+document.getElementById(id).scrollIntoView({
+behavior: "smooth"
+});
+}
+
+/* ZOOM */
 function zoomImg(img) {
 document.getElementById("modal").style.display = "flex";
 document.getElementById("imgZoom").src = img.src;
@@ -15,17 +23,18 @@ function fecharZoom() {
 document.getElementById("modal").style.display = "none";
 }
 
+/* CONTADOR */
 function animateValue(id, end) {
 let start = 0;
 let interval = setInterval(() => {
-start += 1;
+start++;
 document.getElementById(id).innerText = start + "%";
 if (start >= end) clearInterval(interval);
-}, 20);
+}, 15);
 }
 
 window.onload = () => {
-animateValue("num1", 90);
-animateValue("num2", 85);
-animateValue("num3", 95);
+animateValue("num1", 95);
+animateValue("num2", 90);
+animateValue("num3", 98);
 };
